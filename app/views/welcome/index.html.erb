@@ -6,3 +6,9 @@ Pour l'instant la seule documentation est sur le README du projet GitHub
   <li> Projet GitHub du site : <a href="https://github.com/mvoland/the-hacking-bot"> github.com/mvoland/the-hacking-bot </a> </li>
   <li> Projet GitHub tutoriel gem discordrb : <a href="https://github.com/mvoland/thp-tutoriel-bot-discord"> github.com/mvoland/thp-tutoriel-bot-discord </a> </li>
 </ul>
+
+<h2> Liste des utilisateurs </h2>
+
+<div class="list-group">
+  <%= render partial: 'users/user_item', collection: @users, as: :user %>
+</div>
