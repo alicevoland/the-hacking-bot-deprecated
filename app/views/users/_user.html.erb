@@ -1,6 +1,17 @@
-<h5 class="d-flex w-100 pb-1"> <%= user.name %> </h5>
+<%= link_to user_path(user.id), :action => 'go' do %>
 
-<div class="d-flex w-100 justify-content-between">
-  <small> <%= user.discord_id %></small>
-  <small> <%= user.status %></small>
-</div>
+  <div class="d-flex w-100 justify-content-between">
+    <h3 class="d-flex w-100 pb-1"> <%= user.name %> </h3>
+    <%  if user.need_help?
+          color = 'btn btn-warning text-white'
+        elsif user.can_help?
+          color = 'btn btn-success text-white'
+        else
+          color = 'btn btn-outline-secondary text-black'
+        end %>
+    <h4 class="<%= color %>"> <%= user.status %></h4>
+  </div>
+  <div class="d-flex w-100 justify-content-between">
+    <small> discord_id : <%= user.discord_id %></small>
+  </div>
+<% end %>
