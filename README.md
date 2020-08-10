@@ -1,24 +1,10 @@
-# README
+# The Hacking Bot
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Présentation
 
-Things you may want to cover:
+Création d'un bot Discord pour les moussaillons de [The Hacking Project](https://www.thehackingproject.org/), asocié à un site Rails.
 
-* Ruby version
+Un tutoriel sur la création d'un bot Discord avec la [gem discordrb](https://github.com/discordrb/discordrb) est disponible ici : [thp-tutoriel-bot-discord](https://github.com/mvoland/thp-tutoriel-bot-discord).
 
-* System dependencies
+Le site est mis en ligne sur heroku : [the-hacking-bot.herokuapp.com](https://the-hacking-bot.herokuapp.com/), une petite documentation est disponible sur la page d'accueil.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
