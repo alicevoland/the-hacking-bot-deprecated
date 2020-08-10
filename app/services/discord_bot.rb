@@ -1,27 +1,14 @@
 class DiscordBot
   @@discord_bot = nil
 
-  def self.bot
-    if @@bot.nil?
-      @@bot = Discordrb::Commands::CommandBot.new token: ENV['DISCORD_BOT_TOKEN'],
-                                                  client_id: ENV['DISCORD_CLIENT_ID'],
-                                                  prefix: '$',
-                                                  advanced_functionality: true
-    end
-
-    @@bot
-  end
-
   def self.run
-    return unless @@discord_bot.nil?
+    return 'Déjà réveillé :)' unless @@discord_bot.nil?
 
     @@discord_bot = Discordrb::Commands::CommandBot.new token: ENV['DISCORD_BOT_TOKEN'],
                                                         client_id: ENV['DISCORD_CLIENT_ID'],
                                                         prefix: '$',
                                                         advanced_functionality: true
     bot = @@discord_bot
-
-    # bot.send_message(737_655_830_031_237_232, 'Waking up', tts = false, embed = nil)
 
     # bot.message(with_text: 'Hi') do |event|
     #   event.respond 'Hey!'
@@ -36,5 +23,7 @@ class DiscordBot
 
     at_exit { bot.stop }
     bot.run :async
+
+    'On a réveillé le bot, merci'
   end
 end
